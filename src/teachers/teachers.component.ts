@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { ProductService } from './product.service';
+import { TeacherService } from './teacher.service';
+import { ITeacher } from './teacher';
 
 @Component({
     selector: 'ht-teachers',
@@ -9,11 +10,13 @@ import { ProductService } from './product.service';
 export class TeachersComponent implements OnInit{
  
     pageTitle: string = "welkom";
-    constructor(private _teacherService: ProductService){
+    constructor(private _teacherService: TeacherService){
+
+
 
     }
 
-    teachers: any[] = [];
+    teachers: ITeacher[] = [];
     onRatingClicked(message: string): void{
         this.pageTitle= 'Teachers ' + message;
     }

@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
+import { ITeacher } from "./teacher";
 
 @Injectable()
-export class ProductService{
-    getTeachers(): any[]{
+export class TeacherService{
+    getTeachers(): ITeacher[]{
         return[
             {
                 "teacherFirstName": "Ronny",

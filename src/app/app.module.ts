@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TeachersComponent} from '../teachers/teachers.component';
@@ -16,7 +16,7 @@ import { StarComponent } from '../shared/star.component';
     TeachersComponent, AddTeacherComponent, QuoteComponent, StarComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
