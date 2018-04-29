@@ -1,0 +1,12 @@
+[{
+                "teacherFirstName": "Ronny",
+                "teacherLastName": "Mossuse",
+                "vak": "wiskunde",
+                "starRating": 4
+            },
+            {
+                "teacherFirstName": "Pieter",
+                "teacherLastName": "Van Der Helst",
+                "vak": "webApps",
+                "starRating": 3
+            }]
