@@ -22,7 +22,11 @@ const app = express();
 const Users = require('./routes/Users');
 
 //poortnr
-const port = process.env.port || 8080; 
+const server_port = process.env.YOUR_PORT || process.env.PORT || 80;
+const server_host = process.env.YOUR_HOST || '0.0.0.0';
+server.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
+});
 
 //cors middleware
 app.use(cors());
