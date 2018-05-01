@@ -27,6 +27,8 @@ const port = process.env.port || 8080;
 //cors middleware
 app.use(cors());
 
+
+
 // set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
