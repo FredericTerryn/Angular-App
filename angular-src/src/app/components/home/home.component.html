@@ -1,22 +1,47 @@
+<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+
 <div class="jumbotron text-center">
-  <h1>Teachers Rating</h1>
-  <p class="lead">Welcome to my teachers app</p>
+  <h1>Lectoren In Gent</h1>
+  <p class="lead">Quotes. Examens. Ratings.</p>
   <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
   <a class="btn btn-info" [routerLink]="['/login']">LogIn</a>  
   
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-  <h3>Express backend</h3>
-  <p> A mean app: Mongoose, Express, Angular and Node</p>
-  </div>
-  <div class="col-md-4">
-  <h3>Angular CLI</h3>
-  <p> A mean app: Mongoose, Express, Angular and Node</p>
-  </div>  
-  <div class="col-md-4">
-  <h3>JWT tokens</h3>
-  <p> A mean app: Mongoose, Express, Angular and Node</p>
+<ul class="nav nav-tabs row ">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" [routerLink]="['/quotes']">Famous Teachers Quotes</a>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade show active " id="rating">
+    <p class="mt-2">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+    <img src="../../../assets/martinlutherking.jpg" class="img-fluid pb-4" alt="Responsive image">
   </div>
 </div>
+
+<ul class="nav nav-tabs row ">
+    <li class="nav-item">
+      <a class="nav-link active " data-toggle="tab" [routerLink]="['/register']">Rate Your Teachers</a>
+  </ul>
+  
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade show active" id="rating">
+      <p class="mt-2">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+      <img src="../../../assets/graph.jpg" class="img-fluid pb-4" alt="Responsive image">  
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs row ">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" [routerLink]="['/register']">Find Everything they're gonna ask here</a>
+    </ul>
+    
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade show active " id="exams">
+        <p class="mt-2">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+        <img src="../../../assets/martinlutherking.jpg" class="img-fluid pb-4" alt="Responsive image">
+      </div>
+    </div>
+    
+
