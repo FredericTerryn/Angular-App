@@ -16,8 +16,9 @@ export class AddQuoteComponent implements OnInit {
   ngOnInit() {
   }
 
-  addLeerkrachtQuotes(newLeerkrachtQuotes : HTMLInputElement) : boolean {
+  addLeerkrachtQuotes(newLeerkrachtQuotes : HTMLInputElement, bijhorendeQuote : HTMLInputElement) : boolean {
     const quotes = new Quotes(newLeerkrachtQuotes.value);
+    quotes.addQuote(bijhorendeQuote.value);
     this.newQoutesVanLeerkrachtblock.emit(quotes);
     return false;
   }

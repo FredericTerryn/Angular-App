@@ -6,9 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  @Input() inhoud: string;
+  @Input() public inhoud: string;
 
-  constructor() { }
+  constructor() { 
+    this.inhoud = "dit is een voorbeeld";
+  }
 
   ngOnInit() {
   }

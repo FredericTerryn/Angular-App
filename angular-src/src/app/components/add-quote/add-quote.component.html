@@ -6,6 +6,9 @@
     <div class="field">
       <label for="naam">naam:</label> 
       <input id="naam" name="naam" #nieuweLeerkracht>
+
+      <label for="quote">quote:</label> 
+      <input id="quote" name="quote" #bijhorendeQuote>
     </div>
-    <button class="button btn-primary" (click)="addLeerkrachtQuotes(nieuweLeerkracht)"> Voeg de leerkracht toe</button>
+    <button class="button btn-primary" (click)="addLeerkrachtQuotes(nieuweLeerkracht, bijhorendeQuote)"> Voeg de leerkracht toe</button>
   </div>	

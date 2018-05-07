@@ -7,22 +7,22 @@
     <a class="btn btn-info" [routerLink]="['/login']">knop</a>   
   </div>
 
-  <article>
-      <h2>Selecteer een school:</h2>
-      <select class="btn btn-primary dropdown-toggle" (change)="selectChangeHandler($event)">
-        <option class="dropdown-item" value="Hogent">Hogent</option>
-        <option class="dropdown-item" value="Ugent">Ugent</option>
-      </select>
-    </article>
-  
+ 
     <ul>
         <li *ngFor="let quotes of _quotesVanTeacherBlokken">
           {{quotes._naam}}
         </li>
+        <li *ngFor="let quotes of _quotesVanTeacherBlokken">
+            {{quotes._quotes}}
+          </li>
       </ul>
 
-    <p>quotes van : {{_quotesVanTeacher._naam}}</p>
-    <p>zijn quotes : {{_quotesVanTeacher._quotes}}</p>
+      <h1>Dit zijn de quotes van:  <ul>
+          <li *ngFor="let quotes of _quotesVanTeacherBlokken">
+            {{quotes._naam}}
+          </li>
+        </ul>
+      </h1>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -32,9 +32,9 @@
           <th scope="col">DateAdded </th>
         </tr>
       </thead>
-      <tbody *ngFor= "let quote of quotes">
-        <td> <app-quote [inhoud]="quote"></app-quote> </td>
-        <td> Verhak </td>
+      <tbody *ngFor= "let quotes of _quotesVanTeacherBlokken">
+        <td> <app-quote [inhoud]="quotes._quotes"></app-quote> </td>
+        <td> {{quotes._quotes}} </td>
         <td> College </td>
         <td> {{DateAdded | date: 'longDate'}} </td>
       </tbody>
@@ -44,3 +44,16 @@
 
 
     <app-add-quote (newQoutesVanLeerkrachtblock)="newQuotesBlockAdded($event)"></app-add-quote>
+
+
+    <article>
+        <h2>Selecteer een school:</h2>
+        <select class="btn btn-primary dropdown-toggle" (change)="selectChangeHandler($event)">
+          <option class="dropdown-item" value="Hogent">Hogent</option>
+          <option class="dropdown-item" value="Ugent">Ugent</option>
+        </select>
+      </article>
+    
+
+    <p>quotes van : {{_quotesVanTeacher._naam}}</p>
+    <p>zijn quotes : {{_quotesVanTeacher._quotes}}</p>
