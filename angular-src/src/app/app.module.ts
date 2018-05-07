@@ -18,12 +18,14 @@ import { AuthService} from './services/src/app/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { QuoteComponent } from './components/quote/quote.component';
+import { AddQuoteComponent } from './components/add-quote/add-quote.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'quotes', component: QuotesComponent},
+  {path: 'add-quote', component: AddQuoteComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
 ]
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     ProfileComponent,
     QuotesComponent,
-    QuoteComponent
+    QuoteComponent,
+    AddQuoteComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

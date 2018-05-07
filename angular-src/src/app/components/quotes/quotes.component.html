@@ -10,12 +10,19 @@
   <article>
       <h2>Selecteer een school:</h2>
       <select class="btn btn-primary dropdown-toggle" (change)="selectChangeHandler($event)">
-        
         <option class="dropdown-item" value="Hogent">Hogent</option>
         <option class="dropdown-item" value="Ugent">Ugent</option>
       </select>
     </article>
+  
+    <ul>
+        <li *ngFor="let quotes of _quotesVanTeacherBlokken">
+          {{quotes._naam}}
+        </li>
+      </ul>
 
+    <p>quotes van : {{_quotesVanTeacher._naam}}</p>
+    <p>zijn quotes : {{_quotesVanTeacher._quotes}}</p>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -31,4 +38,9 @@
         <td> College </td>
         <td> {{DateAdded | date: 'longDate'}} </td>
       </tbody>
+
+
     </table>
+
+
+    <app-add-quote (newQoutesVanLeerkrachtblock)="newQuotesBlockAdded($event)"></app-add-quote>

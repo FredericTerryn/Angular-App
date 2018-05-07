@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quotes } from './components/quotes/quotes.model'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+
+  constructor(){
+
+  }
+
+
 }
