@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+
+<div class="jumbotron text-center">
+    <h1>Beruchte Examenvragen </h1>
+    <p class="lead"> Richting: Toegepaste Informatica Hogent</p>
+    <a class="btn btn-info" [routerLink]="['/examenstoevoegen']">Net examen gehad? Share it! </a> 
+  </div>
+
+
+  <div>
+  <table class="table border" id="navbar-color02" style="width:100%">
+    <thead class="table-info">
+    <tr>
+      <th class="table-success text-light text-center" id="table1"> Toegepaste Informatica</th>
+    </tr>
+    <tr class="text-light">
+      <th>Vak </th> 
+      <th>Vraag/ Tip</th>
+      <th>Lector</th>
+      <th>Jaar (1/2/3)</th>
+      <th>Belang</th>
+    </tr>
+  </thead>
+    <tr *ngFor="let d of _myData">
+        <td>{{d.inhoud}}</td>
+        <td>{{d.leerkracht}}</td> 
+        <td>{{d.school}}</td>
+      </tr>
+  </table>
+</div> 

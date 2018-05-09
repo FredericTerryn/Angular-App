@@ -6,6 +6,9 @@ const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../Models/User');
 
+//dit is een 'submodule' van app, dus ipv van app.get/post zit je al 1tje verder, in router.get/post, maar dus wel binnen user, dus hier user/register
+//vergeet het niet te exporten (onderaan)
+//testen kan met res.send (res = result, req = request)
 router.post('/register', (req, res, next) => {
     let newUser = new User({
         name: req.body.name,
@@ -62,5 +65,6 @@ router.post('/authenticate', (req, res, next) => {
 router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     res.json({user: req.user});
 });
+
 
 module.exports = router;

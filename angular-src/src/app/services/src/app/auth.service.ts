@@ -16,13 +16,19 @@ export class AuthService {
   registerUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/register', user, {headers: headers}).map(res => res.json());
+    return this.http.post('http://localhost:3000/users/register', user, {headers: headers}).map(res => res.json());
+  }
+
+  addquote(uitspraak){
+    let headers= new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/Uitspraken/newuitspraak', uitspraak, {headers: headers}).map(res => res.json());
   }
 
   authenticateUser(user){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/authenticate', user, {headers: headers}).map(res => res.json());
+    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers}).map(res => res.json());
   }
 
   getProfile(){
@@ -30,7 +36,14 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization', this.authtoken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('/users/profile', {headers: headers}).map(res => res.json());
+    return this.http.get('http://localhost:3000/users/profile', {headers: headers}).map(res => res.json());
+  }
+
+  getUitspraken(){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/Uitspraken/overzicht', {headers: headers}).map(res => res.json());
   }
 
   loadToken(){
@@ -53,5 +66,11 @@ export class AuthService {
     this.authtoken = null;
     this.user = null;
     localStorage.clear();
+  }
+
+  addExamenVraag(examenvraag){
+    let headers= new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/examens/nieuwevraag', examenvraag, {headers: headers}).map(res => res.json());
   }
 }

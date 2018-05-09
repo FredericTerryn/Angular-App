@@ -3,57 +3,34 @@
 <div class="jumbotron text-center">
     <h1>De bekendste quotes</h1>
     <p class="lead">Lectoren van Hogent, Ugent en omstreken </p>
-    <a class="btn btn-primary" [routerLink]="['/register']">Voeg Toe</a>
-    <a class="btn btn-info" [routerLink]="['/login']">knop</a>   
+    <a class="btn btn-primary" [routerLink]="['/add-quote']">Voeg je eigen quote toe</a> 
   </div>
 
- 
-    <ul>
-        <li *ngFor="let quotes of _quotesVanTeacherBlokken">
-          {{quotes._naam}}
-        </li>
-        <li *ngFor="let quotes of _quotesVanTeacherBlokken">
-            {{quotes._quotes}}
-          </li>
-      </ul>
+  <div>
+  <table class="table border" id="navbar-color02" style="width:100%">
+    <thead class="table-primary">
+    <tr class="text-light">
+      <th>Quote</th>
+      <th>Leerkracht</th> 
+      <th>School</th>
+    </tr>
+  </thead>
+    <tr *ngFor="let d of _myData">
+        <td>{{d.inhoud}}</td>
+        <td>{{d.leerkracht}}</td> 
+        <td>{{d.school}}</td>
+      </tr>
+  </table>
+</div> 
 
-      <h1>Dit zijn de quotes van:  <ul>
-          <li *ngFor="let quotes of _quotesVanTeacherBlokken">
-            {{quotes._naam}}
-          </li>
-        </ul>
-      </h1>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Quote</th>
-          <th scope="col">Lector</th>
-          <th scope="col">School</th>
-          <th scope="col">DateAdded </th>
-        </tr>
-      </thead>
-      <tbody *ngFor= "let quotes of _quotesVanTeacherBlokken">
-        <td> <app-quote [inhoud]="quotes._quotes"></app-quote> </td>
-        <td> {{quotes._quotes}} </td>
-        <td> College </td>
-        <td> {{DateAdded | date: 'longDate'}} </td>
-      </tbody>
-
-
-    </table>
-
-
-    <app-add-quote (newQoutesVanLeerkrachtblock)="newQuotesBlockAdded($event)"></app-add-quote>
-
-
-    <article>
+ <!--...  <article>
         <h2>Selecteer een school:</h2>
         <select class="btn btn-primary dropdown-toggle" (change)="selectChangeHandler($event)">
           <option class="dropdown-item" value="Hogent">Hogent</option>
           <option class="dropdown-item" value="Ugent">Ugent</option>
         </select>
       </article>
-    
+--> 
+      <app-add-quote (newQoutesVanLeerkrachtblock)="newLeerkrachtQuotesAdded($event)"></app-add-quote>
 
-    <p>quotes van : {{_quotesVanTeacher._naam}}</p>
-    <p>zijn quotes : {{_quotesVanTeacher._quotes}}</p>
+

@@ -1,17 +1,18 @@
 export class Quotes {
-    private _naam: string;
-    private _dateAdded: Date = new Date();
-    private _quotes =  new Array<string>();
+    private id: string;
+    private inhoud: string; 
+    private leerKrachtnaam: string;
+    private school: string;
+    private __v: number;
 
-    constructor(naam :string){
-        this._naam = naam;
+    constructor(inhoud :string, leerkracht :string, school:string){
+        this.inhoud = inhoud;
+        this.leerKrachtnaam = leerkracht;
+        this.school = school;
     }
 
-    get inhoud() : string {
-        return this._naam;
+    get deInhoud() : string {
+        return this.inhoud;
     }
 
-    addQuote(inhoud: string, lector?: string, school?: string){
-        this._quotes.push(`${lector || ""} ${school || ""} ${inhoud}`);
-    }
 }

@@ -1,14 +1,31 @@
 <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
 
 
-<div class="jumbotron"> 
-    <h3>Add a Teacher witch quotes</h3>
-    <div class="field">
-      <label for="naam">naam:</label> 
-      <input id="naam" name="naam" #nieuweLeerkracht>
+<div class=" text-center border">
+  <div class="mx-3">
+  <h3 class="mt-3">Voeg een quote toe</h3>
 
-      <label for="quote">quote:</label> 
-      <input id="quote" name="quote" #bijhorendeQuote>
-    </div>
-    <button class="button btn-primary" (click)="addLeerkrachtQuotes(nieuweLeerkracht, bijhorendeQuote)"> Voeg de leerkracht toe</button>
-  </div>	
+  <form (submit)="onAddQuoteSubmit()">
+    <div class="field text-center ">
+
+      <div class="form-group">
+        <legend class="text-left">QUOTE:</legend>
+        <input type="text" [(ngModel)]="inhoud" name="inhoud" class="form-control text-center">
+      </div>
+
+      <div class="form-group">
+        <legend class="text-left">Leerkracht:</legend>
+        <input type="text" [(ngModel)]="leerkracht" name="leerkracht" class="form-control text-center">
+      </div>
+
+      <div class="form-group">
+          <legend class="text-left">School:</legend>
+          <input type="text" [(ngModel)]="school" name="leerkracht" class="form-control text-center">
+        </div>
+
+      <input type="submit" class="btn btn-info mb-3" value="Voeg toe">
+    </div>  
+
+  </form>
+</div>
+  </div>

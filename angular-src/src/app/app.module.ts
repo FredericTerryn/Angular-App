@@ -17,15 +17,19 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthService} from './services/src/app/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { QuotesComponent } from './components/quotes/quotes.component';
-import { QuoteComponent } from './components/quote/quote.component';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
+import { ExamsComponent } from './components/exams/exams.component';
+import { AddExamsComponent } from './components/add-exams/add-exams.component';
+
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'quotes', component: QuotesComponent},
-  {path: 'add-quote', component: AddQuoteComponent},
+  {path: 'examenstoevoegen', component: AddExamsComponent, canActivate: [AuthGuard]},
+  {path: 'examens', component: ExamsComponent},
+  {path: 'add-quote', component: AddQuoteComponent,  canActivate: [AuthGuard]},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
 ]
@@ -40,8 +44,9 @@ const appRoutes: Routes = [
     DashboardComponent,
     ProfileComponent,
     QuotesComponent,
-    QuoteComponent,
     AddQuoteComponent,
+    ExamsComponent,
+    AddExamsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
