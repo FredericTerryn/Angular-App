@@ -37,4 +37,10 @@ router.get('/overzicht',(req, res, next) => {
     });
 });
 
+router.delete("/delete/:id", (req, res, next) => {
+    Examen.remove({_id: req.params.id}).then(function(Examen){
+        res.send(Examen);
+    });
+}); 
+
 module.exports = router;

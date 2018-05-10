@@ -9,6 +9,15 @@
   </ul>
 </div>
 
+<div class="mt-3">
+<h3>
+  Examenvragen
+  <small class="text-muted">door jou toegevoegd</small>
+</h3>
+</div>
+
+
+
 <div>
   <table class="table border" id="navbar-color02" style="width:100%">
     <thead class="table-info">
@@ -18,16 +27,20 @@
       <th>Moeilijkheidsgraad</th>
       <th>Academiejaar</th>
       <th>Leerkracht</th>
+      <th></th>
     </tr>
   </thead>
     <tr *ngFor="let d of _myData" >
-     
         <td *ngIf="d.user.Username == user.Username">{{d.vak}}</td>
         <td *ngIf="d.user.Username == user.Username">{{d.vraag}}</td> 
         <td *ngIf="d.user.Username == user.Username">{{d.moeilijkheidsgraad}}</td> 
         <td *ngIf="d.user.Username == user.Username">{{d.academiejaar1}} - {{d.academiejaar2}}</td> 
         <td *ngIf="d.user.Username == user.Username">{{d.academiejaar1}}</td>
-      
+        <td *ngIf="d.user.Username == user.Username"><Button class="btn btn-danger btn-sm">Delete</Button></td>
       </tr>
   </table>
+
+  
 </div> 
+
+<legend class="text-center container" id="footer">Keep sharing! Zo graken we samen het verst </legend>

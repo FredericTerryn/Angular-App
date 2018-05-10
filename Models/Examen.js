@@ -35,3 +35,7 @@ const Examen = module.exports = mongoose.model('Examenvraag', ExamenvraagSchema)
 module.exports.addExamenvraag = function(newExamenvraag, callback){
     newExamenvraag.save(callback);
 };
+
+module.exports.GetExamenByIDAndRemove = function(id, callback){
+    Examen.findById(id, callback);
+}
