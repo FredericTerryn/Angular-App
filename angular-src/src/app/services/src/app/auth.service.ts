@@ -46,6 +46,13 @@ export class AuthService {
     return this.http.get('http://localhost:3000/Uitspraken/overzicht', {headers: headers}).map(res => res.json());
   }
 
+  getExamenvragen(){
+    let headers = new Headers();
+    this.loadToken();
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/examens/overzicht', {headers: headers}).map(res => res.json());
+  }
+
   loadToken(){
     const token = localStorage.getItem('id_token');
     this.authtoken = token;

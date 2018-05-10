@@ -1,7 +1,33 @@
-<div *ngIf="user">
+<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+
+
+<div *ngIf="user" class="mb-3">
   <h2 class="page-header">{{user.name}}</h2>
   <ul class="list-group">
     <li class="list-group-item">Username: {{user.Username}}</li>
     <li class="list-group-item">Email: {{user.email}}</li>
   </ul>
 </div>
+
+<div>
+  <table class="table border" id="navbar-color02" style="width:100%">
+    <thead class="table-info">
+    <tr class="text-light">
+      <th>Vak </th> 
+      <th>Vraag/ Tip</th>
+      <th>Moeilijkheidsgraad</th>
+      <th>Academiejaar</th>
+      <th>Leerkracht</th>
+    </tr>
+  </thead>
+    <tr *ngFor="let d of _myData" >
+     
+        <td *ngIf="d.user.Username == user.Username">{{d.vak}}</td>
+        <td *ngIf="d.user.Username == user.Username">{{d.vraag}}</td> 
+        <td *ngIf="d.user.Username == user.Username">{{d.moeilijkheidsgraad}}</td> 
+        <td *ngIf="d.user.Username == user.Username">{{d.academiejaar1}} - {{d.academiejaar2}}</td> 
+        <td *ngIf="d.user.Username == user.Username">{{d.academiejaar1}}</td>
+      
+      </tr>
+  </table>
+</div> 

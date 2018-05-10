@@ -14,7 +14,8 @@ router.post('/nieuweVraag', (req, res, next) => {
         vak: req.body.vak,
         academiejaar1: req.body.academiejaar1,
         academiejaar2: req.body.academiejaar2, 
-        moeilijkheidsgraad: req.body.moeilijkheidsgraad
+        moeilijkheidsgraad: req.body.moeilijkheidsgraad,
+        user: req.body.user
     });
 
     Examen.addExamenvraag(newExamenvraag, (err, quote) => {
@@ -23,6 +24,16 @@ router.post('/nieuweVraag', (req, res, next) => {
         } else {
             res.json({succes: true, msg:'De nieuwe examenvraag is aangemaakt'});
         }
+    });
+});
+
+router.get('/overzicht',(req, res, next) => {
+    let query = Examen.find();
+    query.exec(function(err, examenvraags) {
+        if (err) {
+            return next(err);
+          } 
+          res.json(examenvraags)
     });
 });
 

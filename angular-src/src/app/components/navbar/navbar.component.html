@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   
-  <a class="navbar-brand" href="#">Teachers App</a>
+  <a class="navbar-brand" href="#">Lectoren in Gent</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,17 +12,21 @@
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}">
           <a *ngIf="!authService.loggedIn()" [routerLink]="['/login']" class="nav-link"> Login <span class="sr-only">(current)</span></a>
+          <a *ngIf="authService.loggedIn()" [routerLink]="['/profile']" class="nav-link"> Profile <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}">
           <a *ngIf="!authService.loggedIn()" [routerLink]="['/register']" class="nav-link"> Register <span class="sr-only">(current)</span></a>
+          <a *ngIf="authService.loggedIn()" [routerLink]="['/quotes']" class="nav-link"> quotes <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]= "{exact:true}">
+          <a *ngIf="authService.loggedIn()" [routerLink]="['/examens']" class="nav-link"> Examenvragen <span class="sr-only">(current)</span></a>
       </li>
     </ul>
 
 
     <form class="form-inline my-2 my-lg-0">
-        <a *ngIf="authService.loggedIn()" [routerLink]="['/dashboard']" class="btn btn-outline-secondary btn-sm"> Dashboard <span class="sr-only">(current)</span></a>
-        <a *ngIf="authService.loggedIn()" [routerLink]="['/profile']" class="btn btn-outline-secondary btn-sm"> Profile <span class="sr-only">(current)</span></a>
-      <a *ngIf="authService.loggedIn()" (click)="onLogoutClick()" href="#" class="btn btn-outline-secondary"> Log out <span class="sr-only">(current)</span></a>
+    
+      <a *ngIf="authService.loggedIn()" (click)="onLogoutClick()" href="#" class="btn btn-outline-secondary ml-2"> Log out <span class="sr-only">(current)</span></a>
  
     </form>
   </div>

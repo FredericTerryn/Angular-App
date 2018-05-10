@@ -9,6 +9,7 @@ import { Router} from '@angular/router'
 })
 export class ProfileComponent implements OnInit {
   user: object;
+  _myData: [object];
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -19,6 +20,17 @@ export class ProfileComponent implements OnInit {
     console.log(err);
     return false;
   });
+  this.authService.getExamenvragen().subscribe(
+    (examenvragen) =>{
+      console.log(examenvragen);
+      this._myData = examenvragen;
+  },
+  err => {
+    console.log(err);
+    return false;
+  });
+  
   }
+  
 
 }

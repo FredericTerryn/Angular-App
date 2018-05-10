@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileComponent } from '../profile/profile.component'
 
 import {ValidateService} from '../../services/validate.service'
 import {FlashMessagesService} from 'angular2-flash-messages'
@@ -16,7 +17,8 @@ export class AddExamsComponent implements OnInit {
   academiejaar1: number;
   academiejaar2: number;
   moeilijkheidsgraad: string;
-  
+  user: object;
+
   selectChangeHandler(event:any){
     this.vak = event.target.value;
     console.log(this.vak);
@@ -41,17 +43,23 @@ onOptionSelected(event){
    }
 
   ngOnInit() {
+    this.authService.getProfile().subscribe(profile => {
+      this.user = profile.user;
+    }, 
+  err => {
+    console.log(err);
+    return false;
+  });
   }
-
-
-
+  
   onAddExamenvraagSubmit(){
     const examenvraag = {
       vraag: this.vraag,
       vak: this.vak,
       academiejaar1: this.academiejaar1,
       academiejaar2: this.academiejaar2, 
-      moeilijkheidsgraad: this.moeilijkheidsgraad
+      moeilijkheidsgraad: this.moeilijkheidsgraad,
+      user: this.user
     }
 
     if(!this.validateService.validateQuote(examenvraag)){

@@ -16,19 +16,19 @@
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade show active " id="rating">
     <p class="mt-2">Je kent ze wel, die typische lectoren die overenthousiast voor de klas staan, en de ene na de andere levenswijsheid op jullie los laten. Je vind ze nu hier allemaal gebundeld! Heb je een nieuwe gehoord? Voeg hem dan toe, en anders kan je hier je kennis komen updaten. Zodat je niet langer als quote-leek over de straten van Gent moet ronddwalen.</p>
-    <img src="../../../assets/martinlutherking.jpg" class="img-fluid pb-4" alt="Responsive image">
+    <img src="../../../assets/martinlutherking.jpg" [routerLink]="['/examens']" class="img-fluid pb-4" alt="Responsive image">
   </div>
 </div>
 
   <ul class="nav nav-tabs row ">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" [routerLink]="['/register']">Exams: Find Everything they're gonna ask here</a>
+        <a class="nav-link active" data-toggle="tab" [routerLink]="['/examens']">Exams: Find Everything they're gonna ask here</a>
     </ul>
     
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade show active " id="exams">
         <p class="mt-2">Haal je steevast een 9/20, terwijl je denkt dat je heel je cursus volledig kent? Panikeer niet! Iedereen weet intussen dat leerkrachten niet vragen wat in hun cursus staat, maar gewoon random vragen die ze uitgevonden hebben. Gelukkig zijn die vragen wel ieder jaar hetzelfde. Leer ze hier vanbuiten en haal gegarandeerd een 10!</p>
-        <img src="../../../assets/exams.jpg" class="img-fluid pb-4" alt="Responsive image">
+        <img src="../../../assets/exams.jpg" [routerLink]="['/examens']" class="img-fluid pb-4 " alt="Responsive image">
       </div>
     </div>
     

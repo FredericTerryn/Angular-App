@@ -10,21 +10,27 @@
   <div>
   <table class="table border" id="navbar-color02" style="width:100%">
     <thead class="table-info">
-    <tr>
-      <th class="table-success text-light text-center" id="table1"> Toegepaste Informatica</th>
-    </tr>
     <tr class="text-light">
       <th>Vak </th> 
       <th>Vraag/ Tip</th>
-      <th>Lector</th>
-      <th>Jaar (1/2/3)</th>
-      <th>Belang</th>
+      <th>Moeilijkheidsgraad</th>
+      <th>Academiejaar</th>
+      <th>Leerkracht</th>
     </tr>
   </thead>
     <tr *ngFor="let d of _myData">
-        <td>{{d.inhoud}}</td>
-        <td>{{d.leerkracht}}</td> 
-        <td>{{d.school}}</td>
+        <td>{{d.vak}}</td>
+        <td>{{d.vraag}}</td> 
+        <td>{{d.moeilijkheidsgraad}}</td> 
+        <td>{{d.academiejaar1}} - {{d.academiejaar2}}</td> 
+        <td>{{d.academiejaar1}}</td>
       </tr>
   </table>
 </div> 
+
+
+  <div *ngIf="!authService.loggedIn()" class="text-center mt-3 mb-3 border">
+    <p class="lead mb-3 mt-3">Wil je zelf een quote toevoegen? Maak eerst een account aan!</p>
+    <a class="btn btn-primary mb-3" [routerLink]="['/register']">registreer</a>
+    <a class="btn btn-info mb-3" [routerLink]="['/login']">login</a>  
+  </div>

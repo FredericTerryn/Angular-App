@@ -23,6 +23,10 @@ const ExamenvraagSchema = mongoose.Schema({
     moeilijkheidsgraad: {
         type: String, 
         required: true
+    }, 
+    user: {
+        type: Object, 
+        required: true
     }
 });
 

@@ -5,6 +5,10 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const app = express();
+const router = express.Router();
+const jwt = require('jsonwebtoken');
+const User = require('../Models/User');
 
 //connect to database, de connectie zit dus in de config file
 mongoose.connect(config.database);
@@ -60,6 +64,8 @@ app.get('/', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
+
 
 //start server
 app.listen(port, () => {

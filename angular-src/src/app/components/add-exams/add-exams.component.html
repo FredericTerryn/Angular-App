@@ -3,11 +3,10 @@
 
 <div class=" text-center border">
   <div class="mx-3">
-  <h3 class="mt-3 mb-3">Deel jouw examenvragen</h3>
+  <h3 class="mt-3 mb-3">Welke vraag ken jij {{user.Username}} ?</h3>
 
   <form (submit)="onAddExamenvraagSubmit()">
     <div class="field text-center ">
-
         <div class="form-group">
             <legend class="text-left">De effectieve vraag:</legend>
             <input type="text" [(ngModel)]="vraag" name="vraag" class="form-control">

@@ -6,22 +6,16 @@
     <a class="btn btn-primary" [routerLink]="['/add-quote']">Voeg je eigen quote toe</a> 
   </div>
 
-  <div>
-  <table class="table border" id="navbar-color02" style="width:100%">
-    <thead class="table-primary">
-    <tr class="text-light">
-      <th>Quote</th>
-      <th>Leerkracht</th> 
-      <th>School</th>
-    </tr>
-  </thead>
-    <tr *ngFor="let d of _myData">
-        <td>{{d.inhoud}}</td>
-        <td>{{d.leerkracht}}</td> 
-        <td>{{d.school}}</td>
-      </tr>
-  </table>
-</div> 
+
+<ul>
+  <li *ngFor="let d of _myData">
+      <blockquote class="blockquote">
+          <p class="mb-0">{{d.inhoud}}</p>
+          <footer class="blockquote-footer"> {{d.leerkracht}} <cite title="Source Title">{{d.school}}</cite></footer>
+        </blockquote>
+  </li>
+</ul>
+
 
  <!--...  <article>
         <h2>Selecteer een school:</h2>
@@ -31,6 +25,13 @@
         </select>
       </article>
 --> 
+  <div *ngIf="authService.loggedIn()" >
       <app-add-quote (newQoutesVanLeerkrachtblock)="newLeerkrachtQuotesAdded($event)"></app-add-quote>
 
+    </div>
 
+    <div *ngIf="!authService.loggedIn()" class="text-center mt-3 mb-3 border">
+      <p class="lead mb-3 mt-3">Wil je zelf een quote toevoegen? Maak eerst een account aan!</p>
+      <a class="btn btn-primary mb-3" [routerLink]="['/register']">registreer</a>
+      <a class="btn btn-info mb-3" [routerLink]="['/login']">login</a>  
+    </div>
