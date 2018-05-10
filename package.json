@@ -5,14 +5,19 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node app",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
+    "angular-font-awesome": "^3.1.2",
     "bcryptjs": "*",
     "body-parser": "*",
     "bootstrap": "^4.1.1",
     "cors": "*",
+    "cypress": "^2.1.0",
+    "cypress-angularjs-unit-test": "^1.2.1",
     "express": "*",
+    "font-awesome": "^4.7.0",
     "jsonwebtoken": "*",
     "mongoose": "*",
     "passport": "*",
