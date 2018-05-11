@@ -1,7 +1,7 @@
 OPGELET: Vordereringen zijn gemaakt op 
-# BRANCH: BackEnd !!
+# BRANCH: BackEnd 
 Dus niet op de master branch. 
-(Als de applicatie-navbar 'Home, Persoonlijk Dashboard, Quotes en Examenvragen toont zit u juist.)
+(Als de applicatie-navbar 'Home, Persoonlijk Dashboard, Quotes en Examenvragen toont zit u juist.) Dank voor het begrip
 
 Online: 
 Heroku: https://arcane-earth-61259.herokuapp.com (nog niet online). 
