@@ -17,11 +17,13 @@
     "cypress": "^2.1.0",
     "cypress-angularjs-unit-test": "^1.2.1",
     "express": "*",
+    "express-jwt": "^5.3.1",
     "font-awesome": "^4.7.0",
-    "jsonwebtoken": "*",
+    "jsonwebtoken": "^8.2.1",
     "mongoose": "*",
-    "passport": "*",
-    "passport-jwt": "*"
+    "passport": "^0.4.0",
+    "passport-jwt": "*",
+    "passport-local": "^1.0.0"
   },
   "author": "Frederic Terryn",
   "license": "ISC"
