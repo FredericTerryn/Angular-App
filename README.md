@@ -1,7 +1,9 @@
-OPGELET: Vordereringen zijn gemaakt op 
+OPGELET: Vorderingen zijn gemaakt op:
 # BRANCH: BackEnd 
 Dus niet op de master branch. 
-(Als de applicatie-navbar 'Home, Persoonlijk Dashboard, Quotes en Examenvragen toont zit u juist.) Dank voor het begrip
+
+(Als de applicatie-navbar 'Home, Persoonlijk Dashboard, Quotes en Examenvragen toont zit u juist.) Dank voor het begrip. 
+De andere branches was nog een testfase, om angular te ontdekken. Waaruit ik dan uiteindelijk wel components, ... heb gehaald. Dit is de reden waarom ze gedeeld blijven. 
 
 Online: 
 Heroku: https://arcane-earth-61259.herokuapp.com (nog niet online). 
