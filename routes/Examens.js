@@ -43,8 +43,14 @@ router.get('/overzicht',(req, res, next) => {
     });
 }); */
 
-router.delete("/delete", (req, res, next) => {
+router.delete('/delete', (req, res, next) => {
     Examen.remove({_id: req.body._id}).then(function(Examen){
+        res.send(Examen);
+    });
+});
+
+router.put('/update', (req, res, next) => {
+    Examen.findByIdAndUpdate({_id: req.body._id}, req.body).then(function(Examen){
         res.send(Examen);
     });
 });

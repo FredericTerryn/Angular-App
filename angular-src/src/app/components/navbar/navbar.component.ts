@@ -10,6 +10,10 @@ import {FlashMessagesService} from 'angular2-flash-messages'
 })
 export class NavbarComponent implements OnInit {
 
+  collapsed = true;
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;}
+
   constructor(
     private authService: AuthService,
     private router: Router,

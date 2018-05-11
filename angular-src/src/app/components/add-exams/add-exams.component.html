@@ -12,7 +12,7 @@
             <input type="text" [(ngModel)]="vraag" name="vraag" class="form-control">
           </div>
   
-      <div class="row justify-content-md-center">
+      <div class="d-flex align-content-between flex-wrap">
       <article class="text-center mb-3">
           <legend >Selecteer een vak:</legend>
           <select class="btn btn-light dropdown-toggle border" (change)="selectChangeHandler($event)" placeholder="-- Please Select --">
@@ -50,18 +50,20 @@
             <legend >Moeilijkheidsgraad:</legend>
             <select class="btn btn-light dropdown-toggle border text-center" (change)="selectChangeHandler2($event)">
                 <option value="" disabled selected>-- Selecteer --</option>
-              <option class="dropdown-item text-center" value="Hogent">Gratis punten! </option>
-              <option class="dropdown-item text-center" value="Ugent">Bekijk het in je cursus, dan kan je het</option>
-              <option class="dropdown-item text-center" value="Ugent">Doordenker, maar niet onmogelijk</option>
-              <option class="dropdown-item text-center" value="Ugent">Moeilijk! </option>
-              <option class="dropdown-item text-center" value="Ugent">Only for wizards</option>
-              
-              
+              <option class="dropdown-item text-center" value="Gratis punten!">Gratis punten! </option>
+              <option class="dropdown-item text-center" value="Leren = kunnen">Bekijk het in je cursus, dan kan je het</option>
+              <option class="dropdown-item text-center" value="Doordenker">Doordenker, maar niet onmogelijk</option>
+              <option class="dropdown-item text-center" value="Moeilijk!">Moeilijk! </option>
+              <option class="dropdown-item text-center" value="Only for wizards">Only for wizards</option> 
             </select>
           </article>
 
         </div>
+
+        <div class="d-flex flex-row-reverse">
+
       <input type="submit" class="btn btn-info mb-3" value="Voeg toe">
+      </div>
     </div>  
 
   </form>

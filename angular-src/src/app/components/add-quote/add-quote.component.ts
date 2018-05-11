@@ -44,7 +44,7 @@ export class AddQuoteComponent implements OnInit {
 
     //zorg dat alle velden ingevuld zijn
     if(!this.validateService.validateQuote(uitspraak)){
-      this.flashMessage.show('please fill in all fields', {cssClass: 'alert-danger', timeOut: 3000});
+      this.flashMessage.show('Gelieve alle velden in te vullen.', {cssClass: 'alert-danger', timeOut: 3000});
     }
 
     //quote naar de backend sturen
@@ -54,7 +54,7 @@ export class AddQuoteComponent implements OnInit {
           cssClass:'alert-success', timeOut: 3000});
         this.router.navigate(['/quotes']);
       } else {
-        this.flashMessage.show('Something went wrong.', {cssClas: 'alert-danger',
+        this.flashMessage.show('Oeps. Er ging iets verkeerd....', {cssClas: 'alert-danger',
       timeOUt:3000});
       this.router.navigate(['/newuitspraak'])
       }

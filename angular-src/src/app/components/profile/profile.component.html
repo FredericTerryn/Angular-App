@@ -18,7 +18,7 @@
 
 
 
-<div>
+<div class="table-responsive">
   <table class="table border" id="navbar-color02" style="width:100%">
     <thead class="table-info">
     <tr class="text-light">
@@ -27,6 +27,7 @@
       <th>Moeilijkheidsgraad</th>
       <th>Academiejaar</th>
       <th>Leerkracht</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -37,8 +38,12 @@
         <td *ngIf="d.user.Username == user.Username">{{d.academiejaar1}} - {{d.academiejaar2}}</td> 
         <td *ngIf="d.user.Username == user.Username">{{d.academiejaar1}}</td>
         <td *ngIf="d.user.Username == user.Username">
+          <Button (click)="onWijzigExamenvraag(d._id)" class="btn btn-info btn-sm">Wijzig</Button>
+        </td>
+        <td *ngIf="d.user.Username == user.Username">
               <Button (click)="onDeleteExamenvraag(d._id)" class="btn btn-danger btn-sm">Delete</Button>
             </td>
+            
       </tr>
   </table>
 

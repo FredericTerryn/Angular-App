@@ -20,6 +20,7 @@ import { QuotesComponent } from './components/quotes/quotes.component';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
 import { ExamsComponent } from './components/exams/exams.component';
 import { AddExamsComponent } from './components/add-exams/add-exams.component';
+import { WijzigExamenvraagComponent } from './components/wijzig-examenvraag/wijzig-examenvraag.component';
 
 
 const appRoutes: Routes = [
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     QuotesComponent,
     AddQuoteComponent,
     ExamsComponent,
-    AddExamsComponent
+    AddExamsComponent,
+    WijzigExamenvraagComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -27,5 +27,13 @@ validateQuote(uitspraak){
   }
 }
 
+validateExamenvraag(vraag){
+  if(vraag.vraag == undefined ||vraag.vak == undefined || vraag.academiejaar1 == undefined || vraag.academiejaar1 == undefined || vraag.moeilijkheidsgraad == undefined ){ 
+    return false;
+  } else {
+    return true;
+  }
+}
+
 
 }

@@ -7,7 +7,7 @@
   </div>
 
 
-  <div>
+  <div class="table-responsive">
   <table class="table border" id="navbar-color02" style="width:100%">
     <thead class="table-info">
     <tr class="text-light">
@@ -15,7 +15,6 @@
       <th>Vraag/ Tip</th>
       <th>Moeilijkheidsgraad</th>
       <th>Academiejaar</th>
-      <th>Leerkracht</th>
     </tr>
   </thead>
     <tr *ngFor="let d of _myData">
@@ -23,7 +22,6 @@
         <td>{{d.vraag}}</td> 
         <td>{{d.moeilijkheidsgraad}}</td> 
         <td>{{d.academiejaar1}} - {{d.academiejaar2}}</td> 
-        <td>{{d.academiejaar1}}</td>
       </tr>
   </table>
 </div> 

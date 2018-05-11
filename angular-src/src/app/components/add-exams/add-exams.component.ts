@@ -62,8 +62,9 @@ onOptionSelected(event){
       user: this.user
     }
 
-    if(!this.validateService.validateQuote(examenvraag)){
-      this.flashMessage.show('please fill in all fields', {cssClass: 'alert-danger', timeOut: 3000});
+    if(!this.validateService.validateExamenvraag(examenvraag)){
+      this.flashMessage.show('Gelieve alle velden in te vullen.', {cssClass: 'alert-danger', timeOut: 3000});
+      return false;
     }
 
     this.authService.addExamenVraag(examenvraag).subscribe(data => {
@@ -72,7 +73,7 @@ onOptionSelected(event){
           cssClass:'alert-success', timeOut: 3000});
         this.router.navigate(['/']);
       } else {
-        this.flashMessage.show('Something went wrong.', {cssClas: 'alert-danger',
+        this.flashMessage.show('Oeps. Er ging iets verkeerd....', {cssClas: 'alert-danger',
       timeOUt:3000});
       this.router.navigate(['/'])
       }
