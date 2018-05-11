@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+/*import { Injectable } from '@angular/core'
 import { Action } from '@ngrx/store'
 import { Feedback } from '../app/components/feedback/feedback.model'
 
@@ -18,4 +18,4 @@ export class RemoveFeedback implements Action {
 
 }
 
-export type Actions = AddFeedback | RemoveFeedback 
+export type Actions = AddFeedback | RemoveFeedback */
