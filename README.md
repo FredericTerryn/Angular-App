@@ -6,7 +6,7 @@ Dus niet op de master branch.
 De andere branches was nog een testfase, om angular te ontdekken. Waaruit ik dan uiteindelijk wel components, ... heb gehaald. Dit is de reden waarom ze gedeeld blijven. 
 
 Online: 
-Heroku: https://arcane-earth-61259.herokuapp.com (nog niet online). 
+Heroku: https://vast-fortress-20794.herokuapp.com 
 
 
 # HogentTeachers
