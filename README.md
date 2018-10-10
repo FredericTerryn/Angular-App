@@ -1,5 +1,4 @@
-OPGELET: Vorderingen zijn gemaakt op:
-# BRANCH: BackEnd 
+# CORRECT BRANCH: BackEnd 
 Dus niet op de master branch. 
 
 (Als de applicatie-navbar 'Home, Persoonlijk Dashboard, Quotes en Examenvragen toont zit u juist.) Dank voor het begrip. 
